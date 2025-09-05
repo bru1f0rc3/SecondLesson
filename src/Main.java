@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-            firstTask();
-            secondTask();
-            thirdTask();
-        }
+        firstTask();
+        secondTask();
+        thirdTask();
     }
 
-    public static void firstTask(){
+
+    public static void firstTask() {
         long inputGold = 200L;
         byte inputSilver = 39;
         short inputWood = 2005;
@@ -23,11 +23,11 @@ public class Main {
                 inputHasHelper
         );
 
-        int characterGold = (int)characterResources.gold;
+        int characterGold = (int) characterResources.gold;
         int characterSilver = characterResources.silver * 100;
         double characterWood = characterResources.wood;
-        byte characterHealth = (byte)characterResources.health;
-        byte characterHelpersNumber = Byte.parseByte(characterResources.hasHelper? "1" : "0");
+        byte characterHealth = (byte) characterResources.health;
+        byte characterHelpersNumber = Byte.parseByte(characterResources.hasHelper ? "1" : "0");
 
         Character character = new Character(
                 characterGold,
@@ -46,7 +46,7 @@ public class Main {
         System.out.println("Навстречу приключениям!");
     }
 
-    public static void secondTask(){
+    public static void secondTask() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя пользователя:");
         String name = scanner.nextLine();
@@ -89,7 +89,7 @@ public class Main {
         }
     }
 
-    public static void thirdTask(){
+    public static void thirdTask() {
         String pixelKcalDay = "43";
         String beefKcal = "30.2";
         String chickenKcal = "23.8";
@@ -103,7 +103,7 @@ public class Main {
 
     private static Float getMinKcalsSum(String firstDishKcal, String secondDishKcal, String firstDesert, String secondDesert) {
         float minDishKcal = Float.min(Float.parseFloat(firstDishKcal), Float.parseFloat(secondDishKcal));
-        float minDesertKcal = Float.min(Float.parseFloat(firstDesert),Float.parseFloat(secondDesert));
+        float minDesertKcal = Float.min(Float.parseFloat(firstDesert), Float.parseFloat(secondDesert));
         return minDishKcal + minDesertKcal;
     }
 
