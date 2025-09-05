@@ -2,30 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        while (true) {
-            System.out.println("Выберите: \n" +
-                    "1 - Первое задание\n" +
-                    "2 - Второе задание\n" +
-                    "3 - Третье задание\n\n" +
-                    "0 - Выход из программы");
-            Scanner in = new Scanner(System.in);
-            int select_task = in.nextInt();
-
-            switch (select_task) {
-                case 1:
-                    firstTask();
-                    break;
-                case 2:
-                    secondTask();
-                    break;
-                case 3:
-                    thirdTask();
-                    break;
-                case 0:
-                    return;
-                default:
-                    System.out.println("Возможно вы ввели не ту цифру...");
-            }
+            firstTask();
+            secondTask();
+            thirdTask();
         }
     }
 
